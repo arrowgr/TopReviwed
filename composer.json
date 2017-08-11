@@ -1,0 +1,21 @@
+{
+    "name": "silici0/module-brandwidget",
+    "description": "Create a widget with top reviewd product from last 3 months",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Rafael Cunha",
+            "email": "silici0@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "silici0\\TopReviwed\\": ""
+        }
+    }
+}

@@ -1,0 +1,44 @@
+<?php
+    $_items = $block->getCollection();
+?>
+<ul>
+    <?php foreach ($_items as $item): ?>
+        <li>
+            <figure>
+                <div>
+                    <a href="<?php echo $item['productUrl']; ?>" title="product title">
+                        <?php echo $item['productImg']; ?>
+                    </a>
+                </div>
+                <figcaption>
+                    <a href="<?php echo $item['productUrl']; ?>" title="product title">
+                        <?php echo $item['productName']; ?>
+                    </a>
+                </figcaption>
+            </figure>
+            <div class="content">
+                <div class="ratings">
+                    <div class="rating-box">
+                        <div class="rating" style="width: 100%"></div>
+                    </div>
+                    <a href="#">
+                        (<?php echo $item['cont'];?> Reviews)
+                    </a>
+                </div>
+                <span class="price">
+                    £<?php echo number_format($item['productPrice'],2,'.',''); ?>
+                </span>
+                or
+                <span class="finance">
+                    <span class="price">
+                        £<?php echo number_format($item['productSpecialPrice'],2,'.',''); ?>
+                    </span>
+                    a month
+                </span>
+                <a href="<?php echo $item['productUrl']; ?>" class="buy" title="product title">
+                    Buy
+                </a>
+            </div>
+        </li>
+    <?php endforeach; ?>
+</ul>
